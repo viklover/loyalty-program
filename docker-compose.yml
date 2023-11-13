@@ -11,10 +11,16 @@ services:
       context: ./services/cards
     environment: *env
     depends_on:
-      - database
+      database:
+        condition: service_healthy
 
   database:
     image: postgres:16.0
     environment: *env
     volumes:
-      - ./config/postgres/init-db.sh:/docker-entrypoint-initdb.d/init.sql
+      - ./config/postgres/init-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
