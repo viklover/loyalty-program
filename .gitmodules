@@ -1,3 +1,6 @@
 [submodule "services/cards"]
 	path = services/cards
 	url = https://github.com/viklover/loyalty-program-cards-service.git
+[submodule "services/balances"]
+	path = services/balances
+	url = git@github.com:viklover/loyalty-program-balances-service.git
