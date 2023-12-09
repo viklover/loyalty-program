@@ -3,7 +3,7 @@
 	url = https://github.com/viklover/loyalty-program-cards-service.git
 [submodule "services/balances"]
 	path = services/balances
-	url = git@github.com:viklover/loyalty-program-balances-service.git
+	url = https://github.com/viklover/loyalty-program-balances-service.git
 [submodule "services/customers"]
 	path = services/customers
 	url = https://github.com/viklover/loyalty-program-customers-service.git
